@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="178dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="176dp"
+        android:text="Voeg een patient toe:"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/Naam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/Naam"
+        android:layout_width="208dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="467dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Naam"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePickerButton" />
+
+    <Spinner
+        android:id="@+id/spinnerBejaardentehuis"
+        android:layout_width="208dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/datePickerButton"
+        style="?android:spinnerStyle"
+        android:layout_width="208dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="11dp"
+        android:onClick="openDatePicker"
+        android:text="Geboortedatum"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/Naam"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="202dp"
+        android:text="GeboorteDatum:"
+        app:layout_constraintBottom_toTopOf="@+id/datePickerButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerBejaardentehuis" />
+
+    <EditText
+        android:id="@+id/Kamer"
+        android:layout_width="208dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="100dp"
+        android:ems="10"
+        android:hint="Kamer"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/Telefoon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Naam" />
+
+    <EditText
+        android:id="@+id/Telefoon"
+        android:layout_width="208dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="98dp"
+        android:ems="10"
+        android:hint="Telefoon contact persoon"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/Adres"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Kamer" />
+
+    <EditText
+        android:id="@+id/Adres"
+        android:layout_width="208dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="96dp"
+        android:ems="10"
+        android:hint="Adres contact persoon"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/Postcode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Telefoon"/>
+
+    <EditText
+        android:id="@+id/Postcode"
+        android:layout_width="208dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="97dp"
+        android:ems="10"
+        android:hint="Postcode contact persoon"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btnOpslaan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Adres" />
+
+    <Button
+        android:id="@+id/btnOpslaan"
+        android:layout_width="208dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="176dp"
+        android:text="Opslaan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Postcode" />
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ProgressBar
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
